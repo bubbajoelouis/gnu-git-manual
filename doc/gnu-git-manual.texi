@@ -1,1 +1,22 @@
+@include chapters/01-the-mental-model/01-what-git-really-is-and-isnt.texi
+@include chapters/01-the-mental-model/02-the-three-states.texi
+@include chapters/01-the-mental-model/03-commits-trees-and-DAGs.texi
+@include chapters/01-the-mental-model/04-head-branches-and-refs.texi
 
+@include chapters/02-the-basics/05-cloning-pulling-pushing-oh-my.texi
+@include chapters/02-the-basics/06-committing-and-staging.texi
+@include chapters/02-the-basics/07-branching-and-merging.texi
+@include chapters/02-the-basics/08-undoing-mistakes.texi
+
+@include chapters/03-advanced-git/09-rebasing-without-fear.texi
+@include chapters/03-advanced-git/10-the-detatched-head-problem.texi
+@include chapters/03-advanced-git/11-cherry-picking.texi
+@include chapters/03-advanced-git/12-bisecting-bugs.texi
+@include chapters/03-advanced-git/13-git-hooks.texi
+@include chapters/03-advanced-git/14-submodules-and-subtrees.texi
+
+@include chapters/04-git-for-survival/15-resolving-merge-conflicts-like-a-pro.texi
+@include chapters/04-git-for-survival/16-recovering-lost-commits.texi
+@include chapters/04-git-for-survival/17-keeping-a-clean-git-history.texi
+@include chapters/04-git-for-survival/18-git-workflows.texi
+@include chapters/04-git-for-survival/19-using-git-without-quit.texi
