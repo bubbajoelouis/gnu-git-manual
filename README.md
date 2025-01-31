@@ -26,7 +26,7 @@ Because **old-school HOWTOs had the right idea: explain things in a way that mak
 
 ---
 
-## Table of Contents (Tentative)
+## Table of Contents
 
 ### I. The Mental Model
 1. **What Git Really Is (and Isn’t)**
