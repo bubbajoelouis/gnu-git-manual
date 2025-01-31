@@ -14,7 +14,13 @@
 
 <h3>Now, here’s an <b>equally-terrible</b> opening paragraph for Git following the same formula:</h3>
 
-<h2>"In order for Git to manage a repository, it must store revisions in a structured format. A repository consists of commits, which represent snapshots of a project at a given point in time. Each commit is linked to one or more previous commits, forming a history. For example, in a software project, a new commit may be created by recording changes to a file. Another commit may be an initial commit, which establishes the repository’s first state. As you can see, commits are typically linked together to track changes, but there must be at least one commit to start the history."</h2>
+<h2>"In order for Git to effectuate version control over a repository, it is imperative that the repository be structured in a well-defined and logically consistent manner. Specifically, Git employs a directed acyclic graph (DAG) to represent a sequence of immutable snapshots, herein referred to as commits. Each commit embodies the state of the repository at a particular moment and is uniquely identified by a cryptographic hash, ensuring both referential integrity and deterministic retrieval.
+
+Commits are not isolated entities but instead participate in a hierarchical lineage, where each commit—except in the base case—references one or more antecedent commits. This recursive relationship establishes what is conventionally described as the commit history. The most primitive form of a commit, known as the initial commit, lacks predecessors and serves as the foundational element from which all subsequent revisions derive.
+
+To illustrate, consider a software project in which a new commit is instantiated via the act of persisting modifications to the repository. Such a commit, by necessity, incorporates a reference to its immediate predecessor(s), thereby extending the directed graph while maintaining its fundamental acyclic nature. Alternatively, in the case of an uninitialized repository, the commit in question assumes the role of the initial commit and, as such, lacks antecedent references.
+
+It follows, then, that a repository’s state is invariably reducible to a sequence of commits, each of which contributes incrementally to the overall revision history. As is the case with all well-defined recursive structures, there exists a requisite base case—namely, the initial commit—which serves as the termination condition for backward traversal. Consequently, every repository necessarily contains at least one commit, thereby satisfying the foundational requirement of historical continuity."</h2>
 
 <h2>Is this really how the GNU Git Manual should start?</h2>
 
