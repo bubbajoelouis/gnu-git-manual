@@ -1,3 +1,32 @@
+ <h1>🚨PROJECT ON HOLD 🚨</h1>
+<h2>This project is ON HOLD because the GNU Manual Manual (GNU Standards) explicitly points to the GNU Bison Manual as the gold standard. That’s a problem.</h2>
+
+<h3>I find the GNU Bison Manual to be a brilliant, frustrating, tedious, essential, over-explanatory, under-explanatory, self-indulgent, hyper-pedantic, repetitive, and condescendingly educational bureaucratic masterpiece.</h3>
+
+<h3>Git isn't worthy of such a work of art.</h3>
+
+
+
+<h2>Why the GNU Git Manual Will Never Exist</h2>
+<h3>Here’s the actual first paragraph of the GNU Bison Manual:</h3>
+
+<h2>"In order for Bison to parse a language, it must be described by a context-free grammar. This means that you specify one or more syntactic groupings and give rules for constructing them from their parts. For example, in the C language, one kind of grouping is called an ‘expression’. One rule for making an expression might be, “An expression can be made of a minus sign and another expression.” Another would be, “An expression can be an integer.” As you can see, rules are often recursive, but there must be at least one rule which leads out of the recursion."</h2>
+
+<h3>Now, here’s an <b>equally-terrible</b> opening paragraph for Git following the same formula:</h3>
+
+<h2>"In order for Git to manage a repository, it must be described by a content-addressable directed acyclic graph (DAG). This means that you specify one or more references to commits and provide rules for structuring them in a non-circular manner. For example, in a software project, one kind of commit is called a ‘revision’. One rule for making a revision might be, 'A revision can be created by referencing a previous revision and applying a set of changes to produce a new tree object'. Another would be, 'A revision can be an initial commit'. As you can see, revisions are often recursively linked, but there must be at least one commit which leads out of the recursion."</h2>
+
+<h2>Is this really how the GNU Git Manual should start?</h2>
+
+Gimme a break.
+
+This is why there is no GNU Git Manual.
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+
 # Git for Man and Machine
 *A GNU Git Manual, written in the spirit of classic Linux HOWTOs*
 
