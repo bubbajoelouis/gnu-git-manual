@@ -14,7 +14,7 @@
 
 <h3>Now, here’s an <b>equally-terrible</b> opening paragraph for Git following the same formula:</h3>
 
-<h2>"In order for Git to manage a repository, it must be described by a content-addressable directed acyclic graph (DAG). This means that you specify one or more references to commits and provide rules for structuring them in a non-circular manner. For example, in a software project, one kind of commit is called a ‘revision’. One rule for making a revision might be, 'A revision can be created by referencing a previous revision and applying a set of changes to produce a new tree object'. Another would be, 'A revision can be an initial commit'. As you can see, revisions are often recursively linked, but there must be at least one commit which leads out of the recursion."</h2>
+<h2>"In order for Git to manage a repository, it must store revisions in a structured format. A repository consists of commits, which represent snapshots of a project at a given point in time. Each commit is linked to one or more previous commits, forming a history. For example, in a software project, a new commit may be created by recording changes to a file. Another commit may be an initial commit, which establishes the repository’s first state. As you can see, commits are typically linked together to track changes, but there must be at least one commit to start the history."</h2>
 
 <h2>Is this really how the GNU Git Manual should start?</h2>
 
