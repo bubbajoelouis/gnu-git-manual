@@ -1,1 +1,119 @@
+@node What Git Really Is (and Isn't)
+@chapter What Git Really Is (and Isn't)
+
+@quotation
+"Before I studied the art, a punch was just a punch. After I studied the art, a punch was no longer just a punch. Now that I understand, a punch is just a punch." 
+@end quotation
+@right @b{—Bruce Lee}
+
+Git may not be what you think it is. If you have experience with other version control systems (VCS) like Subversion, Perforce, or CVS, you may be carrying mental baggage that makes Git feel foreign, frustrating, or even downright hostile. The secret to mastering Git is not memorizing commands—it’s shifting your mental model to match the way Git actually works.
+
+This article is your guide to that shift. If you truly understand what Git is, the commands become obvious, and your frustration evaporates. If you misunderstand it, you will fight Git every step of the way.
+
+@menu
+* What Git Isn’t::
+* What Git Is::
+* Mental Model: How to Think in Git::
+* Introducing Git for Man and Machine::
+@end menu
+
+@node What Git Isn’t
+@section What Git Isn’t
+
+Before we dive into what Git actually is, let’s clear up some common misconceptions:
+
+@enumerate
+@item Git is not just a ‘better’ SVN
+
+Traditional version control systems track changes. They store a central history of edits, and each revision is just a set of changes applied to the previous version. SVN (Subversion) and CVS work like this.
+
+Git does not track changes. It tracks snapshots. Every commit in Git is not a list of changes—it’s a complete picture of your project at a given point in time. This makes operations like branching, merging, and rewinding incredibly fast and reliable.
+
+@item Git is not just for collaboration
+
+People assume Git is only useful for teams, but it’s equally powerful for solo projects. Even if you never push code to a remote repository, Git still serves as a time machine for your work, letting you experiment without fear and revisit any previous state of your project.
+
+@item Git is not centralized
+
+There is no single "main" repository in Git unless you decide to designate one. Every Git repository is fully self-contained, meaning every copy of a project has its entire history and is capable of independent operation. You can work offline, create local branches, and even rewrite history without affecting anyone else until you explicitly push your changes.
+
+@item Git does not overwrite or delete anything
+
+A common fear of Git newcomers is: "What if I mess something up?" Unlike traditional VCS tools where changes can feel irreversible, Git is built on immutability. Every commit you make is cryptographically hashed and stored permanently—unless you explicitly tell Git to forget it. Even if you "delete" something, Git can almost always recover it.
+@end enumerate
+
+@node What Git Is
+@section What Git Is
+
+Now that we’ve dispelled some myths, let’s talk about what Git actually is.
+
+@enumerate
+@item Git is a Content-Addressable Filesystem
+
+At its core, Git is a key-value store—a kind of database where data is retrieved based on a unique identifier. In Git, every commit, file, directory, and even the history itself is stored as a unique SHA-1 hash.
+
+If you change a file, Git doesn’t store the edit—it stores a new file with a new hash. The same content always produces the same hash, which makes Git incredibly efficient at identifying duplicate content and minimizing storage.
+
+This is why Git is distributed—because every repository contains everything it needs, indexed by its hash.
+
+@item Git is a Graph
+
+Git doesn’t just store snapshots of your project; it links them together in a graph. Every commit is a node that points to its parent(s), forming a branching history. This is what allows Git to efficiently traverse history, merge changes, and understand relationships between different versions of a project.
+
+In Git, branches are just labels that point to a specific commit in this graph. They are not separate directories or copies of files—just pointers to a position in the timeline.
+
+@item Git is a Time Machine
+
+Because Git stores snapshots, it lets you travel backward and forward in time. You can:
+
+@itemize @bullet
+@item View any previous state of your project (@code{git checkout <commit>})
+@item Undo mistakes (@code{git reset} or @code{git revert})
+@item Create alternate realities (@code{git branch})
+@end itemize
+
+Even if you rewrite history (@code{git rebase}), the old history is usually recoverable. This flexibility makes Git feel more like a time machine than a traditional version control system.
+
+@item Git is an Experimentation Framework
+
+If you take nothing else from this article, remember this:
+
+@quotation
+Git makes it safe to experiment.
+@end quotation
+
+@itemize @bullet
+@item Want to try a new feature? Make a branch.
+@item Need to backtrack? Checkout an old commit.
+@item Mess something up? Reset, revert, or rebase.
+@end itemize
+
+Git is designed to let you take risks without fear of losing work. Once you embrace this, Git transforms from an obstacle into a powerful creative tool.
+@end enumerate
+
+@node Mental Model: How to Think in Git
+@section Mental Model: How to Think in Git
+
+If you remember these three things, you’ll already be ahead of most Git users:
+
+@enumerate
+@item Git is about snapshots, not changes. Every commit is a full, independent state of your project.
+@item Branches are just labels. Switching branches is like teleporting through history.
+@item Nothing is ever truly lost. Git is designed for safety and recoverability.
+@end enumerate
+
+@node Introducing Git for Man and Machine
+@section Introducing Git for Man and Machine
+
+This article serves as the foundation for the GNU Git Manual: @emph{Git for Man and Machine}.
+
+@strong{For Man:} If you're a human trying to learn Git, this manual will guide you through its concepts in a way that makes sense.
+
+@strong{For Machine:} Git is not just a human tool—it’s a system. Understanding how Git works at a fundamental level allows you to automate, extend, and integrate it into your own workflows with confidence.
+
+The following chapters will explore Git’s core mechanics, best practices, and workflows, helping you become not just a Git user, but a Git thinker.
+
+@quotation
+If you’ve ever felt like Git is fighting you, don’t worry—it’s not Git, it's you. You just need to adjust your mental model. Once you do, you’ll wonder how you ever worked without it.
+@end quotation
 
