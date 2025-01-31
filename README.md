@@ -53,7 +53,7 @@ Because **old-school HOWTOs had the right idea: explain things in a way that mak
 16. **Recovering Lost Commits**
 17. **Keeping a Clean Git History**
 18. **Git Workflows: What Works and What Doesn’t**
-19. **Using Git Without Ragequitting**
+19. **Using Git Without Quit**
 
 ---
 
